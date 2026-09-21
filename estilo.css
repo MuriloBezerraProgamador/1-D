@@ -1,67 +1,218 @@
+/* Zera margens padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Rolagem de âncoras */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos base gerais */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #f4f4f4;
+    color: #333333;
 }
 
+/* Alteração Perceptível 1: Fundo em gradiente suave */
 .cabecalho {
-    background-color: #2c3e50;
-    color: #fff;
+    background: linear-gradient(135deg, #1e3a5f, #0f2038);
+    color: #ffffff;
+    padding: 30px 20px;
     text-align: center;
-    padding: 2rem;
 }
 
-.conteudo {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
+/* Espaço do título */
+.cabecalho h1 {
+    margin-bottom: 15px;
 }
 
-.minha-secao {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.minha-secao h2 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-.casas {
+/* Alinha links horizontais */
+.menu-principal {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
-.casa {
-    background-color: #241818;
-    border: 1px solid #6b2020;
-    border-radius: 10px;
-    width: 250px;
-    padding: 15px;
+/* Alteração Perceptível 2: Animação de linha embaixo do menu ao passar o mouse */
+.menu-principal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
 }
 
-.casa h3 {
-    margin-top: 5px;
+.menu-principal a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a3c1e0;
+    transition: width 0.3s ease;
 }
 
-.casa p {
-    font-size: 16px;
+.menu-principal a:hover::after {
+    width: 100%;
 }
-.rodape {
+
+/* Limita largura máxima */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Espaço interno seções */
+section {
+    padding: 60px 25px;
+}
+
+/* Fundo branco início */
+.secao-inicio {
     text-align: center;
-    padding: 1.5rem;
-    background-color: #34495e;
-    color: #fff;
-    margin-top: 40px;
+    background-color: #ffffff;
+}
+
+/* Títulos das seções */
+.secao-inicio h2,
+.secao-sobre h2,
+.secao-contato h2 {
+    margin-bottom: 15px;
+    color: #1e3a5f;
+}
+
+/* Centraliza os textos */
+.secao-inicio p,
+.secao-sobre p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+/* Alteração Perceptível 3: Botão levita ao passar o mouse */
+.botao {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1e3a5f;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao:hover {
+    background-color: #142940;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fundo cinza claro */
+.secao-sobre {
+    background-color: #e8eef5;
+    text-align: center;
+}
+
+/* Fundo branco contato */
+.secao-contato {
+    background-color: #ffffff;
+}
+
+/* Alteração Perceptível 4: Formulário dentro de um "card" elevado com sombra */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+form label {
+    font-weight: bold;
+    color: #1e3a5f;
+}
+
+/* Bordas das caixas */
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Destaque ao clicar no campo */
+input:focus,
+textarea:focus {
+    border-color: #1e3a5f;
+    box-shadow: 0 0 5px rgba(30, 58, 95, 0.3);
+}
+
+/* Permite aumentar altura */
+textarea {
+    resize: vertical;
+}
+
+/* Botão de formulário */
+#btn-enviar {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e3a5f;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btn-enviar:hover {
+    background-color: #142940;
+    transform: translateY(-2px);
+}
+
+/* Fundo final página */
+.rodape {
+    padding: 20px;
+    background-color: #1e3a5f;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Botão sempre visível */
+#btn-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e3a5f;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btn-topo:hover {
+    background-color: #142940;
+    transform: scale(1.1); /* Botão cresce levemente no hover */
 }
