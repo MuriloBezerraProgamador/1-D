@@ -1,119 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Quem é Jão?</title>
+    <!-- Configurações da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título na aba -->
+    <title>Meu Projeto Web</title>
+    <!-- Link para CSS -->
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
-<body style="background-color: #33150a;
- color: white;
- font-family: Arial;">
+<body>
+    <!-- Cabeçalho principal -->
+    <header class="cabecalho">
+        <h1>Meu Projeto Web</h1>
 
-    <header style="background-color: #7c2308;
-     text-align: center;
-     padding: 20px;">
-
-        <h1 style="font-size: 45px;">JÃO</h1>
-        <p>Conheça um pouco sobre o cantor brasileiro</p>
-
+        <!-- Menu de navegação -->
+        <nav class="menu-principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
 
-    <main style="margin: 30px;">
-
-        <section>
-            <h2 style="color: #b44f20;">Quem é Jão?</h2>
-
-            <p style="font-size: 18px;">
-                Jão é um cantor e compositor brasileiro.
-                Seu nome verdadeiro é João Vitor Romania Balbino.
-                Ele ficou conhecido por suas músicas que falam
-                sobre amor, relacionamentos e sentimentos.
+    <!-- Conteúdo central -->
+    <main>
+        <!-- Seção de início -->
+        <section id="inicio" class="secao-inicio">
+            <h2>Bem-vindo ao meu projeto</h2>
+            <p>
+                Esta página foi criada utilizando HTML5 e CSS3,
+                seguindo boas práticas de organização e estrutura semântica.
             </p>
 
-            <p style="font-size: 18px;">
-                Suas músicas conquistaram muitos fãs e fizeram
-                Jão se tornar um dos nomes conhecidos da música
-                brasileira atual.
+            <!-- Link estilo botão -->
+            <a href="#sobre" class="botao">Saiba mais</a>
+        </section>
+
+        <!-- Seção sobre -->
+        <section id="sobre" class="secao-sobre">
+            <h2>Sobre o projeto</h2>
+            <p>
+                O objetivo deste projeto é praticar a criação de páginas
+                utilizando HTML semântico e estilos organizados em um
+                arquivo CSS separado.
             </p>
         </section>
 
-        <section>
-            <h2 style="color: #b44f20;">Carreira</h2>
+        <!-- Seção de contato -->
+        <section id="contato" class="secao-contato">
+            <h2>Entre em contato</h2>
 
-            <p style="font-size: 18px;">
-                Jão começou a publicar suas músicas na internet
-                e foi conquistando espaço na música brasileira.
-                Com o passar dos anos, lançou vários álbuns e
-                realizou grandes shows.
-            </p>
+            <!-- Formulário interativo -->
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <!-- Campo de texto -->
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-            <h3 style="color: #b44f20;">Principais momentos</h3>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-            <ul style="font-size: 17px;">
-                <li>2018 - Lobos</li>
-                <li>2021 - Pirata</li>
-                <li>2023 - Super</li>
-                <li>2024 - Supernova</li>
-            </ul>
+                <label for="mensagem">Mensagem:</label>
+                <!-- Área de texto -->
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+                <!-- Botão de envio -->
+                <button type="submit" id="btn-enviar">Enviar mensagem</button>
+            </form>
         </section>
-
-        <section>
-            <h2 style="color: #b44f20;">Álbuns</h2>
-
-            <div style="background-color: #8d502f;
-             padding: 15px;
-             margin: 15px;">
-
-                <h3 style="color: #d9b38c;">Lobos</h3>
-                <p>Álbum lançado em 2018.</p>
-
-            </div>
-
-            <div style="background-color: #8d502f;
-             padding: 15px;
-             margin: 15px;">
-
-                <h3 style="color: #d9b38c;">Pirata</h3>
-                <p>Álbum lançado em 2021.</p>
-
-            </div>
-
-            <div style="background-color: #8d502f;
-             padding: 15px;
-             margin: 15px;">
-
-                <h3 style="color: #d9b38c;">Super</h3>
-                <p>Álbum lançado em 2023.</p>
-
-            </div>
-
-            <div style="background-color:#8d502f;
-             padding: 15px;
-             margin: 15px;">
-
-                <h3 style="color: #d9b38c;">Supernova</h3>
-                <p>Álbum lançado em 2024.</p>
-
-            </div>
-
-        </section>
-
-        <section>
-            <h2 style="color: #b44f20;">Músicas</h2>
-
-            <p style="font-size: 18px;">
-                Algumas músicas conhecidas do Jão:
-            </p>
-
-            <ul style="font-size: 17px;">
-                <li>Idiota</li>
-                <li>Imaturo</li>
-                <li>Me lambe</li>
-                <li>Alinhamento Milenar</li>
-                <li>Pilantra</li>
-            </ul>
-
-        </section>
-
     </main>
+
+    <!-- Rodapé da página -->
+    <footer class="rodape">
+        <p>&copy; 2026 - Projeto Web | Desenvolvido pela Sala do 1D</p>
+        <!-- Botão flutuante -->
+        <a href="#inicio" id="btn-topo" title="Voltar ao topo" aria-label="Voltar ao topo">↑</a>
+    </footer>
 </body>
 </html>
